@@ -1,12 +1,21 @@
-# indent your Python code to put into an email
+#! /usr/bin/env python
+'''
+	Andrew Baumann's contribution to David Brizan's
+	doctoral thesis project. All code is under the
+	GNU License
+
+	Special thanks to this:
+	https://wiki.python.org/moin/SimplePrograms
+'''
+
 import glob
-# glob supports Unix style pathname extensions
-processed = glob.glob('*.txt')
-for file_name in sorted(processed):
-    print '    ------' + file_name
+from Streamy import Streamy 
+from Corpus import Corpus
+from Utterance import Utterance
 
-    with open(file_name) as f:
-        for line in f:
-            print '    ' + line.rstrip()
+x = Streamy(input("what are you searching for? : "))
+x.Picker()
 
-    print
+
+
+
