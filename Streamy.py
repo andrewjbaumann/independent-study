@@ -8,11 +8,15 @@
     https://wiki.python.org/moin/SimplePrograms
 '''
 import glob
+import os
+
 
 class Streamy: 
-    def __init__(self, q):
-        self.query = q
-        self.processed = glob.glob('*.txt')
+    def __init__(self, query, corpii):
+        self.query = query
+        self.corp = corpii
+        if corpii == "sw":
+            self.processed = glob.glob('corpus/switchboard/*/*.utt')
 
     def Picker(self):
         for file_name in sorted(self.processed):
