@@ -9,8 +9,9 @@
 '''
 
 class Utterance:
-    def __init__(sent, speak, ty):
-        self.sentence = sent
-        self.speaker = speak 
-        self.typee = ty 
+    def __init__(self, sentence, speaker, typ, file_name):
+        self.sentence = sentence
+        self.speaker = speaker
+        self.typee = typ 
+        self.file_name = file_name
     

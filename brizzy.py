@@ -8,10 +8,9 @@
 	https://wiki.python.org/moin/SimplePrograms
 '''
 
-import glob
+from Utterance import Utterance
 from Streamy import Streamy 
 from Corpus import Corpus
-from Utterance import Utterance
 
 x = ""
 y = ""
@@ -21,24 +20,25 @@ while True:
 	if x == "D" or x == "d":
 		x = "{D"
 		break
-	else if x == "F" or x == "f";
+	elif x == "F" or x == "f":
 		x = "{F"
 		break
-	else if x == "C" or x == "c";
+	elif x == "C" or x == "c":
 		x = "{C"
 		break
-	else if x == "E" or x == "e";
+	elif x == "E" or x == "e":
 		x = "{E"
 		break
-	else if x == "repeat"
+	elif x == "repeat":
 		x = "+"
 		break
 
 while True:
 	y = input("which corpus do you want to look in? ")
 	if y ==  "Switchboard" or y == "sw":
-		run = Streamy(x, "sw")
-		run.Picker()
+		y = "sw"
+		run = Corpus(x, y)
+		run.Start()
 		break
 	else: 
 		continue 
